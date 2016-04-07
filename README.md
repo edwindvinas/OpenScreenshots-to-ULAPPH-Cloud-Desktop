@@ -3,6 +3,10 @@ Open Screenshots and upload to ULAPPH Cloud Desktop
 
 This is a cloned repo of https://github.com/AminaG/OpenScreenshot which I have modified so it will upload screenshots to ULAPPH Cloud Desktop. Only the manifest and editor.html was modified. If you own an ULAPPH Cloud Desktop server, you can download this extension and install to your Chrome browser. 
 
+Screenshots
+--
+Slides: http://www.ulapph.com/slides?TYPE=SLIDE&DOC_ID=49&SID=TDSSLIDE-49&MUSIC_ID=0&GET_NEXT=180
+
 Install & Setup
 --
 
