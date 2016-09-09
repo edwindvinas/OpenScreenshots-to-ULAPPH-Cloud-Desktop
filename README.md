@@ -7,17 +7,22 @@ Screenshots
 --
 Slides: http://www.ulapph.com/slides?TYPE=SLIDE&DOC_ID=49&SID=TDSSLIDE-49&MUSIC_ID=0&GET_NEXT=180
 
+![Sample screenshot](http://lh3.googleusercontent.com/jcS9m9SnZ269CHXISovFN8ybFz7McnfSc598iBzfm334Ea87cGqJoKXJbhUDdDVpPwEEqAft1BD5tek1PBSZrYDHZh7i)
+
 Install & Setup
 --
 
-Update the editor.html file to contain your ULAPPH Cloud Desktop server. Then, go to Extensions/Developer mode of Chrome browser and install this chrome extension.
+- Update the editor.html file to contain your ULAPPH Cloud Desktop URL and your email acount. 
+- Update the pluginsBuiltIn.js to also indicate your ULAPPH Cloud Desktop URL.
+- Then, go to Extensions/Developer mode of Chrome browser and install this chrome extension.
+- Note that same process applies for Opera browser (interestingly Chrome extension works in Opera!)
 
 
 How to Contribute?
 --
 
-- Need to replace the iframe with a set of logic to automatically upload screenshots to the ULAPPH Cloud Desktop.
-
+- [Done] Need to replace the iframe with a set of logic to automatically upload screenshots to the ULAPPH Cloud Desktop.
+- Need to put a better way to install so users don't need to touch the code.
 
 ---
 ## Usage
