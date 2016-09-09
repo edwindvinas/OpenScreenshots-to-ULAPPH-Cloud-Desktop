@@ -1,6 +1,6 @@
 {
     "name": "__MSG_name__",
-    "version": "24.0",
+    "version": "24.1",
 
     "commands": {
         "visible_screenshot": {
@@ -25,7 +25,7 @@
     "default_locale": "en",
     "browser_action": {
         "default_icon": "images/browseraction.png",
-        "default_title": "Open Screenshot",
+        "default_title": "Open Screenshot - ULAPPH Cloud Desktop",
         "default_popup": "popup.html"
     },
     "options_page": "options.html",

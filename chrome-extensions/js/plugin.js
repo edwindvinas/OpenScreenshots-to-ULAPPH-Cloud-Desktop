@@ -116,7 +116,8 @@ var sizes = {
                         // console.log(mm = data)
                         // console.log(extStorageGet('options'))
                         $.ajax({
-                            url: 'http://www.openscreenshot.com/upload3.asp',
+                            //url: 'http://www.openscreenshot.com/upload3.asp',
+							url: 'http://edwin-daen-vinas.appspot.com/media?FUNC_CODE=OS_DROP',
                             // url: 'http://127.0.0.5/upload',
                             // url: 'https://www.openscreenshot.com/upload3.asp',
                             type: 'post',
@@ -130,7 +131,7 @@ var sizes = {
                             }
                         }).done(function(a, b, c) {
                             var response = a.replace(/^\s+|\s+$/g, "");
-                            if (/"/.test(response) || />/.test(response) || /</.test(response) || /'/.test(response) || response.indexOf("http:") != 0) {
+                            if (/"/.test(response) || />/.test(response) || /</.test(response) || /'/.test(response) || response.indexOf("https:") != 0) {
                                 alert('error in upload')
                             } else {
                                 response = response.split(',');
@@ -362,7 +363,7 @@ loadjQueryThings = function() {
     jQueryThingsLoaded = true
     $.ajaxPrefilter(function(settings, orgSettings, xhr) {
         if (settings.showProgress) {
-            var html = $('<center class=progresscancel><div>Saving Online...<br><div style=height:20px;background-color:skyblue name=progressbar></div><button name=cancel>Cancel</button></div></center>');
+            var html = $('<center class=progresscancel><div>Saving to your ULAPPH...<br><div style=height:20px;background-color:skyblue name=progressbar></div><button name=cancel>Cancel</button></div></center>');
             var dialog = new Dialog({
                 title: 'Uploading',
                 ui: 'dialog',

@@ -1,5 +1,6 @@
 if(!localStorage.created){
-  chrome.tabs.create({url:'https://www.openscreenshot.com/?t=thankyou'})
+  //chrome.tabs.create({url:'https://www.openscreenshot.com/?t=thankyou'})
+  chrome.tabs.create({url:'http://www.ulapph.com/slides?TYPE=SLIDE&DOC_ID=49&SID=TDSSLIDE-49&MUSIC_ID=0&GET_NEXT=180'})
 }
 var api = {
   stop: false,
@@ -29,7 +30,7 @@ var api = {
       captureWithoutScroll: 0,
       color: '#FF0000',
       captureCount: 0,
-      txtHeader: 'Open Screenshot',
+      txtHeader: 'Open Screenshot - ULAPPH Cloud Desktop',
       txtFotter: '%U %D'
     };
     for (var i in defaults) {

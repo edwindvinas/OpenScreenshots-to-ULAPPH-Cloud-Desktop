@@ -25,7 +25,7 @@
 <div id="header">
   <div class="editor-toolbar" id="toolbar" style=height:100px>
     <a href="https://www.openscreenshot.com" target="_blank" class="logo">
-      <img src="images/icon48.png" alt="Open Screenshot" />
+      <img src="images/icon48.png" alt="Open Screenshot - ULAPPH Cloud Desktop" />
     </a>
     <div class="donation-bar">
       <iframe src="https://ghbtns.com/github-btn.html?user=aminag&repo=openscreenshot&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>
@@ -67,7 +67,16 @@
     <div class="buttons">
       <!--button title="Share" class="share" style="text-indent: initial;font-size:inherit"><span class="icon"></span> ULAPPH Cloud Desktop</button-->
       <!--button title="Share" class="share" style="text-indent: initial;font-size:inherit"><span class="icon"></span> OpenScreenshot</button-->
-      <button title="Save Local" class="save"><span class="icon"></span> Save local</button>
+      <button title="Save Local" class="save"><span class="icon"></span> Save to ULAPPH Cloud Desktop</button>
+	  <!--button title="Save to Cloud" class="share"><span class="icon"></span> Upload to ULAPPH</button-->
+	  <div id="upload-stat" value=""></div>
+	  <input type="hidden" name="host" id="host" value="<Your ULAPPH Cloud Desktop URL>"/>
+	  <input type="hidden" name="uid" id="uid" value="<Your ULAPPH Cloud Desktop Email Account>"/>
+	  <form>
+	  TDSSLIDE-<input type="text" name="sid" id="sid" value="" autofocus/>
+	  <br>Caption<input type="text" name="title" id="title" value=""/>
+	  </form>
+	  <br><div id="note" value=""></div>
       <!--button title="Save to PDF" class="pdf save-to-pdf"><span class="icon"></span></button>
       <button title="Copy" class="copy save-to-clipboard"><span class="icon"></span></button>
       <button title="Thumbnail" class="thumbnail save-to-thumbnail"><span class="icon"></span></button>
@@ -75,7 +84,7 @@
       <!--div id="toolbarContainer" style="  clear: both;
   margin-top: 34px;
   width: 310px;"></div-->
-      <iframe src="http://edwin-daen-vinas.appspot.com/media?FUNC_CODE=OS_DROP" width="300" height="100"></iframe>
+      <!--iframe src="http://edwin-daen-vinas.appspot.com/media?FUNC_CODE=OS_DROP" width="300" height="100"></iframe-->
     </div>
   </div>
 </div>

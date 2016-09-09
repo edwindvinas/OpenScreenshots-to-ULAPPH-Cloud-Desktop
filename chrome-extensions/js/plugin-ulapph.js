@@ -433,7 +433,7 @@ loadjQueryThings = function() {
     jQueryThingsLoaded = true
     $.ajaxPrefilter(function(settings, orgSettings, xhr) {
         if (settings.showProgress) {
-            var html = $('<center class=progresscancel><div>Saving Online...<br><div style=height:20px;background-color:skyblue name=progressbar></div><button name=cancel>Cancel</button></div></center>');
+            var html = $('<center class=progresscancel><div>Saving to ULAPPH Cloud Desktop...<br><div style=height:20px;background-color:skyblue name=progressbar></div><button name=cancel>Cancel</button></div></center>');
             var dialog = new Dialog({
                 //ulapph
                 title: 'Uploading',

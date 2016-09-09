@@ -1,6 +1,6 @@
 var defaultPlugins = [
 {
-		name: 'Save To Disk',
+		name: 'Save To ULAPPH',
 		key: 'save',
 		dataType: 'image',
     editorDefault: true,
@@ -8,6 +8,7 @@ var defaultPlugins = [
 			String.prototype.twoDigits=function () {return this.replace(/^(.)$/,'0$1')};
 			var x = scope.image_blob();
 			var url=URL.createObjectURL(x);
+			console.log("url:" + url);
 			var filename;
 			filename=scope.page_title || scope.page_url;
 			filename=filename.replace(/[%&\(\)\\\/\:\*\?\"\<\>\|\/\]]/g,' ');
@@ -17,9 +18,132 @@ var defaultPlugins = [
 			var evt = document.createEvent("MouseEvents");evt.initMouseEvent("click", true, true, window,0, 0, 0, 0, 0, false, true, false, false, 0, null);
 			var a=$('<a></a>').appendTo(document.body);
 			a.attr({'href':url,'download':filename})[0].dispatchEvent(evt)
+			
+			//ulapph
+			//upload to cloud	
+			
+			var host = document.getElementById('host').value;
+			statmsg = document.getElementById('upload-stat');
+			statmsg.innerHTML = "Host: " + host;
+			
+			var uid = document.getElementById('uid').value;
+			statmsg.innerHTML = "UID: " + uid;
+			
+			var statmsg = ""
+			var dataURItoBlob = function (dataURI) {
+				
+				var toData = dataURI;
+				var ans = toData.slice(toData.indexOf(',') + 1);
+						
+				var binary = atob(ans);
+				var array = [];
+				for (var i = 0; i < binary.length; i++) {
+					array.push(binary.charCodeAt(i));
+				}
+				return new Blob([new Uint8Array(array)], {type: 'image/png'})
+			};
+			var imgBlob = dataURItoBlob(scope.image_data());
+			console.log("imgBlob: "+imgBlob);
+					
+			var xmlhttp;
+			
+			if (window.XMLHttpRequest)
+			  {// code for IE7+, Firefox, Chrome, Opera, Safari
+			  xmlhttp=new XMLHttpRequest();
+			  }
+			else
+			  {// code for IE6, IE5
+			  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+			  }
+
+			var editor_url = "";
+			//var root = location.protocol + '//' + location.host;
+			editor_url = '<Your ULAPPH Cloud Desktop URL>/editor?EDIT_FUNC=GET_UP_URL&SID=TDSMEDIA-0';
+			xmlhttp.open("POST",editor_url,true);
+			xmlhttp.send();
+			
+			//statmsg = document.getElementById('upload-stat');
+			statmsg.innerHTML = "Getting upload url...";
+				
+			//console.log("editor_url:"+editor_url);
+			 xmlhttp.onreadystatechange=function()
+			  {
+			  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+				{
+					var uploadURL = xmlhttp.responseText;
+					//alert(uploadURL);
+					//console.log("uploadURL:"+uploadURL);
+					statmsg = document.getElementById('upload-stat');
+					statmsg.innerHTML = "Getting upload url...ok...";
+					//var dataURL = canvas.toDataURL('image/jpeg', 0.5);
+					//var blob = dataURItoBlob(lc.getImage().toDataURL());
+					//var blob = scope.image_blob();
+					var fd = new FormData(document.forms[0]);
+					
+					fd.append("UID", uid);
+					
+					var sid = "";
+					var tgt = document.getElementById("sid").value;
+					if (parseInt(tgt) > 0) {
+						sid = 'TDSSLIDE-' + tgt;
+						document.getElementById("note").innerHTML = "";
+					} else {
+						sid = "";
+						document.getElementById("note").innerHTML = "<h1>No target slide!</h1>";
+					}
+					fd.append("EMBED", sid);
+			
+					fd.append("file", imgBlob);
+					var caption = "";
+					var ttl = document.getElementById("title").value;
+					if (ttl != "") {
+						caption = ttl;
+						document.getElementById("note").innerHTML = document.getElementById("note").innerHTML + "";
+						fd.append("TITLE", caption);
+					} else {
+						fd.append("TITLE", filename);
+						caption = '';
+						document.getElementById("note").innerHTML = document.getElementById("note").innerHTML + "<b>No caption or title!</b>";
+					}
+			
+					fd.append("DESC", filename);
+					fd.append("DATA_TYPE", "image");
+					fd.append("MIME_TYPE", "image/png");
+					fd.append("FL_SHARED", "N");
+					fd.append("DOC_STAT", "Personal");
+					
+					var request = new XMLHttpRequest();
+					request.open("POST", uploadURL);
+					request.send(fd);
+					//alert("Uploading...");
+					///console.log("Uploading:"+uploadURL);
+					statmsg = document.getElementById('upload-stat');
+					statmsg.innerHTML = "Uploading to ULAPPH...";
+					
+					request.onreadystatechange=function()
+					  {
+					  if (request.readyState==4 && request.status==200)
+						{
+							var redirLink = request.responseText;
+							//console.log("redirLink:"+redirLink);
+							//window.location.assign(redirLink);
+							//window.open(redirLink);
+							//alert("Image has been uploaded to Media Gallery!");
+							var upok = new Audio();
+							upok.autoplay = false;
+							upok.src = navigator.userAgent.match(/Firefox/) ? 'audio/kewl.ogg' : 'audio/kewl.ogg';
+							upok.play();
+							return;
+						}
+					 }
+					statmsg = document.getElementById('upload-stat');
+					statmsg.innerHTML = "Upload ok";
+				}
+			  }
+			//ulapph--
 		}
 	},
-
+	
   {
   name: 'Share with Open Screenshot',
   key: 'openscreenshot',
