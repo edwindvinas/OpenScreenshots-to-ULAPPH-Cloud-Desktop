@@ -1,7 +1,7 @@
-Open Screenshots and upload to ULAPPH Cloud Desktop
+Take Screenshots and Upload to ULAPPH Cloud Desktop
 --
 
-This is a cloned repo of https://github.com/AminaG/OpenScreenshot which I have modified so it will upload screenshots to ULAPPH Cloud Desktop. Only the manifest and editor.html was modified. If you own an ULAPPH Cloud Desktop server, you can download this extension and install to your Chrome browser. 
+This is a cloned repo of https://github.com/AminaG/OpenScreenshot which we have modified so it will upload screenshots to ULAPPH Cloud Desktop. If you own an ULAPPH Cloud Desktop server, you can download this extension and install to your Chrome browser. Then, all your screenshots will automatically be uploaded to the cloud.
 
 Screenshots
 --
@@ -17,13 +17,6 @@ Install & Setup
 - Then, go to Extensions/Developer mode of Chrome browser and install this chrome extension.
 - Note that same process applies for Opera browser (interestingly Chrome extension works in Opera!)
 
-
-How to Contribute?
---
-
-- [Done] Need to replace the iframe with a set of logic to automatically upload screenshots to the ULAPPH Cloud Desktop.
-- Need to put a better way to install so users don't need to touch the code.
-
 ---
 ## Usage
 
@@ -32,13 +25,11 @@ How to Contribute?
  3. Click Save icon.
  4. Drag the saved image below to the iframe/dropzone at the right top corner of Chrome.
  5. Monitor your ULAPPH Cloud Desktop to see the notification showing successful upload.
+ 6. Go to the Recent Media files to see your screenshots inside ULAPPH Cloud Desktop
 
 ## Features
- * Capture screenshots and upload to ULAPPH Cloud Desktop
- 
-## Coming soon (Roadmap)
- * Replace iframe with javascript logic to automatically upload the screenshot.
- * Contribute and merge to OpenScreenshots once functionality is approved for pull request
+ * Capture screenshots and upload to ULAPPH Cloud Desktop using Chrome or Opera browser
+ * All images are uploaed to the ULAPPH Cloud Desktop media gallery
 
 ## Thank you!
  * OpenScreenshots Developer - https://github.com/AminaG/OpenScreenshot

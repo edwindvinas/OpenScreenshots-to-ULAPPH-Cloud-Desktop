@@ -14,6 +14,14 @@ var defaultPlugins = [
 			filename=filename.replace(/[%&\(\)\\\/\:\*\?\"\<\>\|\/\]]/g,' ');
 			//filename+='-' + (new Date).getHours().toString().twoDigits() + (new Date).getMinutes().toString().twoDigits() + (new Date).getSeconds().toString().twoDigits()
 			// filename+=localStorage['pngjpg']=='png' ? '.png' : '.jpg';
+			//remove extra dots on filename
+			filename=filename.replace(/\./g,' ');
+			filename=filename.replace('×','by');
+			
+			//remove special chars
+			filename = filename.replace(/[—‹`~!@#$%^&*()_|+\-=?;:'",. ·<>\{\}\[\]\\\/]/gi, '');
+			//encode filename
+			filename = encodeURIComponent(filename);
 			filename+= '.png' ;
 			var evt = document.createEvent("MouseEvents");evt.initMouseEvent("click", true, true, window,0, 0, 0, 0, 0, false, true, false, false, 0, null);
 			var a=$('<a></a>').appendTo(document.body);
@@ -58,7 +66,7 @@ var defaultPlugins = [
 
 			var editor_url = "";
 			//var root = location.protocol + '//' + location.host;
-			editor_url = '<Your ULAPPH Cloud Desktop URL>/editor?EDIT_FUNC=GET_UP_URL&SID=TDSMEDIA-0';
+			editor_url = 'https://edwin-daen-vinas.appspot.com/editor?EDIT_FUNC=GET_UP_URL&SID=TDSMEDIA-0';
 			xmlhttp.open("POST",editor_url,true);
 			xmlhttp.send();
 			
