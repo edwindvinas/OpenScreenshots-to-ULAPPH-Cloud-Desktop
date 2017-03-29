@@ -7,7 +7,11 @@ Screenshots
 --
 Slides: http://www.ulapph.com/slides?TYPE=SLIDE&DOC_ID=49&SID=TDSSLIDE-49&MUSIC_ID=0&GET_NEXT=180
 
-![Sample screenshot](http://lh3.googleusercontent.com/jcS9m9SnZ269CHXISovFN8ybFz7McnfSc598iBzfm334Ea87cGqJoKXJbhUDdDVpPwEEqAft1BD5tek1PBSZrYDHZh7i)
+![Take screenshot from Browser](http://lh3.googleusercontent.com/jcS9m9SnZ269CHXISovFN8ybFz7McnfSc598iBzfm334Ea87cGqJoKXJbhUDdDVpPwEEqAft1BD5tek1PBSZrYDHZh7i)
+
+![Automatically Uploaded to ULAPPH Cloud Desktop](http://lh3.googleusercontent.com/r1gqprXp8W_YoRAVhbceErKTzYD-Do8eFXix7FbFfaQw3Msw5Xijsqc3TB7Cg57TF17D5hTAYyppcS7cK5CPetJtVZ8eog)
+
+
 
 Install & Setup
 --
