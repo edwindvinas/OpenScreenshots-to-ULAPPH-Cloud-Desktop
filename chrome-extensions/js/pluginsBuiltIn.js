@@ -66,9 +66,13 @@ var defaultPlugins = [
 
 			var editor_url = "";
 			//var root = location.protocol + '//' + location.host;
-			editor_url = 'https://edwin-daen-vinas.appspot.com/editor?EDIT_FUNC=GET_UP_URL&SID=TDSMEDIA-0';
+			editor_url = 'https://your-server-name.appspot.com/editor?EDIT_FUNC=GET_UP_URL&SID=TDSMEDIA-0';
 			xmlhttp.open("POST",editor_url,true);
-			xmlhttp.send();
+			var isUpload = document.getElementById("upload").checked;
+			//alert(isUpload);
+			if (isUpload == true) {	
+				xmlhttp.send();
+			}
 			
 			//statmsg = document.getElementById('upload-stat');
 			statmsg.innerHTML = "Getting upload url...";
