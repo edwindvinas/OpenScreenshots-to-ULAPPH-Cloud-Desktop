@@ -1,11 +1,10 @@
 Take Screenshots and Upload to ULAPPH Cloud Desktop
 --
 
-This is a cloned repo of https://github.com/AminaG/OpenScreenshot which we have modified so it will upload screenshots to ULAPPH Cloud Desktop. If you own an ULAPPH Cloud Desktop server, you can download this extension and install to your Chrome browser. Then, all your screenshots will automatically be uploaded to the cloud.
+This is a cloned repo of https://github.com/AminaG/OpenScreenshot which we have modified so it will upload screenshots to ULAPPH Cloud Desktop. If you own an ULAPPH Cloud Desktop server, you can download this extension and install to your Chrome/Opera browser. Then, all your screenshots will automatically be uploaded to the cloud. Or you have the option to skip upload.
 
 Screenshots
 --
-Slides: http://www.ulapph.com/slides?TYPE=SLIDE&DOC_ID=49&SID=TDSSLIDE-49&MUSIC_ID=0&GET_NEXT=180
 
 ![Take screenshot from Browser](http://lh3.googleusercontent.com/jcS9m9SnZ269CHXISovFN8ybFz7McnfSc598iBzfm334Ea87cGqJoKXJbhUDdDVpPwEEqAft1BD5tek1PBSZrYDHZh7i)
 
@@ -26,10 +25,9 @@ Install & Setup
 
  1. Click on the Open Screenshots icon.
  2. Either select visible screenshot or whole page screenshot.
- 3. Click Save icon.
+ 3. Check if auto-upload, enter slide number and caption. Click Save icon.
  4. Drag the saved image below to the iframe/dropzone at the right top corner of Chrome.
- 5. Monitor your ULAPPH Cloud Desktop to see the notification showing successful upload.
- 6. Go to the Recent Media files to see your screenshots inside ULAPPH Cloud Desktop
+ 5. Go to the Recent Media files to see your screenshots inside ULAPPH Cloud Desktop
 
 ## Features
  * Capture screenshots and upload to ULAPPH Cloud Desktop using Chrome or Opera browser
