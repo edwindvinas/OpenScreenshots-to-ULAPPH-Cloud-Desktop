@@ -145,6 +145,12 @@ var defaultPlugins = [
 							upok.autoplay = false;
 							upok.src = navigator.userAgent.match(/Firefox/) ? 'audio/kewl.ogg' : 'audio/kewl.ogg';
 							upok.play();
+							console.log("redirecting...");
+							    chrome.runtime.sendMessage({
+								data: 'openImageLink',
+								//url: "https://www.google.com"
+								url: redirLink
+							    });
 							return;
 						}
 					 }
